@@ -1,0 +1,40 @@
+
+ header {
+    padding: 154px 0 100px;
+    /* height: 80vh; */
+    /* width: 120vw; */
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+    z-index: -1;
+  }
+  
+  @media (min-width: 992px) {
+    header {
+      padding: 156px 0 100px;
+      display: block;
+      margin: 0 auto;
+      z-index: -1;
+    }
+  }
+  
+  section {
+    padding: 150px 0;
+  }
+
+  #tableRow {
+    height:80vh;
+    max-height: 80vh;
+}
+
+#paraText {
+  background-image: url("/img/graduation.jpg");
+  color: white;
+  height: 80vh;
+  width: 120vw;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+}

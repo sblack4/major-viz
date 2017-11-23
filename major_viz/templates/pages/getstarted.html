@@ -1,0 +1,174 @@
+{% extends "pages/layout.html" %}
+
+{% block body %}
+
+<div class="container">
+    <div class="page-header">
+          <h2>Well Begun is Half Done!</h2>
+    </div>
+
+<div class="row" id="tableRow">
+    <div class="col-md-12">
+        <h3>Where do I start?</h3>
+        <p>
+            * I am not a doctor
+        </p>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" 
+                   id="degrees" 
+                   data-toggle="tab" 
+                   href="#home" 
+                   role="tab" 
+                   aria-controls="home" 
+                   aria-selected="false">
+                    Degrees That Pay
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" 
+                   id="salaries-college" 
+                   data-toggle="tab" 
+                   href="#profile" 
+                   role="tab" 
+                   aria-controls="profile" 
+                   aria-selected="false">
+                    Salaries By College
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" 
+                   id="salaries-region" 
+                   data-toggle="tab" 
+                   href="#contact" 
+                   role="tab" 
+                   aria-controls="contact" 
+                   aria-selected="false">
+                    Salaries By Region
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <table id="degreesTable"
+                       data-toolbar="#toolbar"
+                       data-search="true"
+                       data-show-refresh="true"
+                       data-show-toggle="true"
+                       data-show-columns="true"
+                       data-show-export="true"
+                       data-detail-view="true"
+                       data-minimum-count-columns="2"
+                       data-show-pagination-switch="true"
+                       data-pagination="true"
+                       data-id-field="UndergraduateMajor"
+                       data-page-list="[10, 25, 50, 100, ALL]"
+                       data-show-footer="false"
+                       data-sort-name="UndergraduateMajor"
+                       data-sort-order="asc">
+                    <thead>
+                        <tr>
+                            <th data-field="UndergraduateMajor"
+                                data-sortable="true">
+                                Undergraduate Major
+                            </th>
+                            <th data-field="StartingMedianSalary"
+                                data-sortable="true">
+                                Starting Median Salary
+                            </th>
+                            <th data-field="Mid-CareerMedianSalary"
+                                data-sortable="true"
+                                data-formatter="priceFormatter">
+                                Mid-Career Median Salary
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <table id="collegeTable"
+                       data-toolbar="#toolbar"
+                       data-search="true"
+                       data-show-refresh="true"
+                       data-show-toggle="true"
+                       data-show-columns="true"
+                       data-show-export="true"
+                       data-detail-view="true"
+                       data-minimum-count-columns="2"
+                       data-show-pagination-switch="true"
+                       data-pagination="true"
+                       data-id-field="SchoolName"
+                       data-page-list="[10, 25, 50, 100, ALL]"
+                       data-show-footer="false"
+                       data-sort-name="SchoolName"
+                       data-sort-order="asc">
+                    <thead>
+                        <tr>
+                            <th data-field="SchoolName"
+                                data-sortable="true">
+                                School
+                            </th>
+                            <th data-field="SchoolType"
+                                data-sortable="true">
+                                School Type
+                            </th>
+                            <th data-field="StartingMedianSalary"
+                                data-sortable="true">
+                                Starting Median Salary
+                            </th>
+                            <th data-field="Mid-CareerMedianSalary"
+                                data-sortable="true">
+                                Mid-Career Median Salary
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <table id="regionsTable"
+                       data-toolbar="#toolbar"
+                       data-search="true"
+                       data-show-refresh="true"
+                       data-show-toggle="true"
+                       data-show-columns="true"
+                       data-show-export="true"
+                       data-detail-view="true"
+                       data-minimum-count-columns="2"
+                       data-show-pagination-switch="true"
+                       data-pagination="true"
+                       data-id-field="SchoolName"
+                       data-page-list="[10, 25, 50, 100, ALL]"
+                       data-show-footer="false"
+                       data-sort-name="SchoolName"
+                       data-sort-order="asc">
+                    <thead>
+                        <tr>
+                            <th data-field="SchoolName"
+                                data-sortable="true">
+                                School
+                            </th>
+                            <th data-field="Region"
+                                data-sortable="true">
+                                Region
+                            </th>
+                            <th data-field="StartingMedianSalary"
+                                data-sortable="true">
+                                Starting Median Salary
+                            </th>
+                            <th data-field="Mid-CareerMedianSalary"
+                                data-sortable="true">
+                                Mid-Career Median Salary
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>  
+<div class="row"></div>
+
+{% endblock %}
