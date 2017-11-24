@@ -1,2 +1,4 @@
 flask
-
+urllib2
+json
+jinja2

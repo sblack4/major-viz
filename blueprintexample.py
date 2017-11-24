@@ -1,5 +1,7 @@
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, jsonify
 from major_viz.major_viz import major_viz
+import urllib2
+import json
 
 app = Flask(__name__)
 app.register_blueprint(major_viz)
@@ -30,6 +32,11 @@ def send_font(path):
 @app.route('/data/<path:path>')
 def send_data(path):
       return send_from_directory('major_viz/data',path)
+
+@app.route('/api/<description>')
+def get_jobs(description):
+      response = urllib2.urlopen("https://jobs.github.com/positions.json?description="+description)
+      return jsonify(json.load(response))
 
 
 if __name__=='__main__':

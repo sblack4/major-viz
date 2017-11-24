@@ -1,6 +1,25 @@
-$('document').ready(function() {
 
-    function updateWell(rowData) {
+{
+ "company": "ThoughtWorks",
+ "company_logo": "http://github-jobs.s3.amazonaws.com/e20ce6a2-ca1f-11e7-82be-7f617c8310c9.gif",
+ "company_url": "https://www.thoughtworks.com/careers",
+ "created_at": "Wed Nov 15 16:15:32 UTC 2017",
+ "description": "",
+ "how_to_apply": "",
+ "id": "ec72c0da-ca1f-11e7-9f6a-08ca395905f1",
+ "location": "Berlin, Köln, Hamburg, München",
+ "title": "SENIOR DEVELOPER (m/w)",
+ "type": "Full Time",
+ "url": "http://jobs.github.com/positions/ec72c0da-ca1f-11e7-9f6a-08ca395905f1"
+},
+
+
+
+
+
+$('document').ready(function(){
+
+    function clickHandler(rowData) {
         d3.select("#desc-p")
             .style("opacity", 1)
             .transition()
@@ -18,48 +37,39 @@ $('document').ready(function() {
         }, 500)
     }
 
-    d3.csv("../data/compsci-jobs.csv", function(error, dataSet){
+    d3.json("/api/", function(error, dataSet){
         if(error)
             console.error(error);
         
         $("#major-table").bootstrapTable({
             locale: 'en-US',
-            onClickRow: updateWell,
+            onClickRow: clickHandler,
             columns: [
                 {
-                    field: "Rank",
+                    field: "title",
                     sortable: true,
-                    title: "Rank",
+                    title: "title",
                     searchable: true
                 },{
-                    field: "Career",
+                    field: "company",
                     sortable: true,
-                    title: "Career",
+                    title: "company",
                     searchable: true
                 },{
-                    field: "AvailableJobs",
+                    field: "location",
                     sortable: true,
-                    title: "Available Jobs",
+                    title: "location",
                     searchable: true
                 },{
-                    field: "ProjectedGrowth",
+                    field: "type",
                     sortable: true,
-                    title: "Projected Growth",
+                    title: "type",
                     searchable: true
-                },{
-                    field: "MinimumProjectedGrowthAmount",
-                    sortable: true,
-                    title: "Minimum ProjectedGrowth Amount",
-                    searchable: true
-                },{
-                    field: "MedianSalary",
-                    sortable: true,
-                    title: "Median Annual Salary",
-                    searchable: true,
-                    formatter: priceFormatter
                 }
             ],
             data: dataSet
         })
     })  
+
+
 })
