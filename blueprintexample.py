@@ -9,25 +9,26 @@ app.register_blueprint(major_viz, url_prefix='/pages')
 # serve css
 @app.route('/css/<path:path>')
 def send_css(path):
-      print("IM HIT")
       return send_from_directory('major_viz/css',path)
 
 # serve images
 @app.route('/img/<path:path>')
 def send_img(path):
-      print("IM HIT")
       return send_from_directory('major_viz/img',path)
 
 # serve data 
 @app.route('/js/<path:path>')
 def send_js(path):
-      print("IM HIT")
       return send_from_directory('major_viz/js',path)
+
+# serve fonts 
+@app.route('/fonts/<path:path>')
+def send_font(path):
+      return send_from_directory('major_viz/fonts',path)
 
 # serve js 
 @app.route('/data/<path:path>')
 def send_data(path):
-      print("IM HIT")
       return send_from_directory('major_viz/data',path)
 
 

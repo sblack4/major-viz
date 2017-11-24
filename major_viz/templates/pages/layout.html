@@ -12,10 +12,13 @@
 
   <div id="css">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
     <!-- TauCharts Stylings -->
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/taucharts/latest/tauCharts.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/taucharts/latest/tauCharts.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/awesomecomplete.base.css"
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -88,9 +91,10 @@
     </div>
   </div>
   <!-- ==================== END Navigation ==================== -->
-
-  {% block body %}{% endblock %}
-
+  
+<div class="container">
+  {% block body %}{% endblock %} 
+</div>
 
   <!-- ==================== START Footer ==================== -->
   <div id="footer" class="py-5 bg-dark">
@@ -104,10 +108,8 @@
   <!-- JQuery and Bootstrap core JavaScript -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
   <!-- Latest compiled and minified JavaScript -->
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
 
   <!-- TauCharts & D3 -->
   <script src="//cdn.jsdelivr.net/d3js/3.5.17/d3.min.js" charset="utf-8"></script>
@@ -115,13 +117,16 @@
 
   <!-- Bootstrap-Table -->
   <!-- Latest compiled and minified JavaScript -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js"></script>
   <!-- Latest compiled and minified Locales -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.js"></script> 
+
+  <script src="/js/awesomplete.min.js"></script>
 
   <!-- My JS -->
-  <script src="/js/actions.js"></script>
+  <!-- <script src="/js/actions.js"></script> -->
   <script src="/js/GetStarted.js"></script>
+  <script src="/js/major.js"></script>
 </body>
 
 </html>

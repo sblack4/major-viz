@@ -1,6 +1,56 @@
-{% extends "pages/layout.html" %}
-
-{% block body %}
-
+{% extends "pages/layout.html" %} {% block body %}
+<div class="row" style="height: 10vh;">
+    <div id="major-input" class="col-md-6">
+        <div class="input-group" style="margin-top: 2vh;">
+            <input type="text" list="mylist" class="form-control" placeholder="My Major is..." aria-label="My Major is...">
+            <datalist id="mylist">
+                <option>Computer Science</option>
+                <option>CDS</option>
+                <option>Sociology</option>
+                <option>Computer Engineering</option>
+                <option>Electrical Engineering</option>
+            </datalist>
+            <span class="input-group-btn">
+                <button id="btnMajor" class="btn btn-secondary" type="button">Go!</button>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="row" style="height: 80vh;">
+    <div id="job-table-col" class="col-md-10" style="float: left;">
+        <table id="job-table" class="dataTable" data-toolbar="#toolbar" data-search="true" data-show-refresh="true" data-show-toggle="true"
+            data-show-columns="true" data-show-export="true" data-detail-view="true" data-minimum-count-columns="2" data-show-pagination-switch="true"
+            data-pagination="true" data-id-field="Rank" data-page-list="[10, 25, 50, 100, ALL]" data-show-footer="false" data-sort-name="Rank"
+            data-sort-order="asc">
+            <thead>
+                <tr>
+                    <th data-field="Rank" data-sortable="true">
+                        Rank
+                    </th>
+                    <th data-field="Career" data-sortable="true">
+                        Career
+                    </th>
+                    <th data-field="AvailableJobs" data-sortable="true">
+                        Available Jobs in 7/2014 ~ 6/2015
+                    </th>
+                    <th data-field="ProjectedGrowth" data-sortable="true">
+                        Projected Growth
+                    </th>
+                    <th data-field="MinimumProjectedGrowthAmount" data-sortable="true">
+                        Minimum Projected Growth Amount
+                    </th>
+                    <th data-field="MedianSalary" data-sortable="true">
+                        Median Annual Salary
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="job-description" class="col-md-2" style="float: right;">
+        <div id="description-well" class="well">
+            <p id="desc-p"></p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

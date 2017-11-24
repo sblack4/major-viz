@@ -1,8 +1,8 @@
 
- header {
+ /* header {
     padding: 154px 0 100px;
-    /* height: 80vh; */
-    /* width: 120vw; */
+    height: 80vh; 
+    width: 120vw; 
     background-attachment: fixed;
     background-position: top center;
     background-size: cover;
@@ -18,10 +18,14 @@
       margin: 0 auto;
       z-index: -1;
     }
+  } */
+
+  div.fixed-table-loading {
+    visibility: hidden;
   }
-  
-  section {
-    padding: 150px 0;
+
+  body {
+    overflow-x: hidden;
   }
 
   #tableRow {
@@ -32,9 +36,32 @@
 #paraText {
   background-image: url("/img/graduation.jpg");
   color: white;
-  height: 80vh;
-  width: 120vw;
+  height: 60vh;
+  /* width: 105vw; */
   background-attachment: fixed;
   background-position: top center;
   background-size: cover;
+  overflow-x: hidden;
+}
+
+
+.about-row {
+  margin: 5vh 0 5vh 0;
+}
+
+.about-image {
+  border-radius: 4px;
+}
+
+.page-list {
+  margin: 0 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+
+#bars {
+  height: 60vh;
 }
