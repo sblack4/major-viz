@@ -25,7 +25,6 @@
             data-toolbar="#toolbar" data-search="true" 
             data-show-refresh="true" data-show-toggle="true"
             data-show-columns="true" data-show-export="true" 
-            data-checkbox="true"
             data-detail-view="false" data-minimum-count-columns="2" 
             data-show-pagination-switch="true"
             data-pagination="true" data-id-field="Rank"
@@ -34,9 +33,7 @@
             data-sort-order="asc">
             <thead>
                 <tr>
-                    <th data-checkbox="true" data-field="selected">
-
-                    </th>
+                    <th data-checkbox="true" data-field="selected"></th>
                     <th data-field="Rank" data-sortable="true">
                         Rank
                     </th>
@@ -59,15 +56,63 @@
             </thead>
         </table>
     </div>
-    <div id="job-description" class="col-md-4 col-sm-12" style="float: right; height: 100%; min-height: 100%;">
+    <div id="job-description" class="col-md-4 col-sm-12">
         <h3>Description</h3>
         <div id="description-well" class="well" >
             <p id="desc-p">...</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-2">
-            <button id='#compare-carreers-button' class="btn btn-default" type="submit">Button</button>
+        <div class="col-xs-12">
+            <!-- chartype, x, y, color, size,  -->
+            <button id='compare-carreers-button' class="btn btn-default  chart-config-dropdown" type="submit">
+                Compare Careers
+            </button>
+            <select id="career-charttype-select" class="form-control chart-config-dropdown">
+                <option>horizontal-bar</option>
+                <option>line</option>
+                <option>area</option>
+                <option>bar</option>
+                <option>stacked-bar</option>
+                <option>horizontal-stacked-bar</option>
+            </select>
+            <select id="career-x-select" class="form-control chart-config-dropdown">
+                    <option>AvailableJobs</option>
+                    <option>Rank</option>
+                    <option>Career</option>
+                    <option>ProjectedGrowth</option>
+                    <option>MinimumProjectedGrowthAmount</option>
+                    <option>MedianSalary</option>
+                    <option>DailyDuties</option>
+
+            </select>
+            <select id="career-y-select" class="form-control chart-config-dropdown">
+                    <option>Career</option>
+                    <option>Rank</option>
+                    <option>AvailableJobs</option>
+                    <option>ProjectedGrowth</option>
+                    <option>MinimumProjectedGrowthAmount</option>
+                    <option>MedianSalary</option>
+                    <option>DailyDuties</option>
+            </select>
+            <select id="career-color-select" class="form-control chart-config-dropdown">
+                <option>MedianSalary</option>
+                <option>Rank</option>
+                <option>Career</option>
+                <option>AvailableJobs</option>
+                <option>ProjectedGrowth</option>
+                <option>MinimumProjectedGrowthAmount</option> 
+                <option>DailyDuties</option>
+            </select>
+            <select id="career-size-select" class="form-control chart-config-dropdown">
+                <option>MinimumProjectedGrowthAmount</option>
+                <option>Rank</option>
+                <option>Career</option>
+                <option>AvailableJobs</option>
+                <option>ProjectedGrowth</option>
+                <option>MedianSalary</option>
+                <option>DailyDuties</option>
+            </select>
         </div>
     </div>
     <div class="row">
