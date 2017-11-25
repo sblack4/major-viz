@@ -1,6 +1,51 @@
-{% extends "pages/layout.html" %}
-
-{% block body %}
-
+{% extends "pages/layout.html" %} {% block body %}
+<div class="row" style="height: 10vh;">
+    <div id="major-input" class="col-md-6 col-xs-12">
+        <div class="input-group" style="margin-top: 2vh;">
+            <input type="text" list="mylist" class="form-control" placeholder="My Major is..." aria-label="My Major is...">
+            <datalist id="mylist">
+                <option>Computer Science</option>
+                <option>CDS</option>
+                <option>Sociology</option>
+                <option>Computer Engineering</option>
+                <option>Electrical Engineering</option>
+            </datalist>
+            <span class="input-group-btn">
+                <button id="btnMajor" class="btn btn-secondary" type="button">Go!</button>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="row" style="height: 80vh;">
+    <div id="elective-table-col" class="col-md-10 col-sm-12" style="float: left;">
+        <table id="elective-table" class="dataTable" data-toolbar="#toolbar" data-search="true" data-show-refresh="true" data-show-toggle="true"
+            data-show-columns="true" data-show-export="true" data-detail-view="true" data-minimum-count-columns="2" data-show-pagination-switch="true"
+            data-pagination="true" data-id-field="Rank" data-page-list="[10, 25, 50, 100, ALL]" data-show-footer="false" data-sort-name="Rank"
+            data-sort-order="asc">
+            <thead>
+                <tr>
+                    <th data-field="Type" data-sortable="true">
+                        Type
+                    </th>
+                    <th data-field="Course" data-sortable="true">
+                        Course
+                    </th>
+                    <th data-field="Course Name" data-sortable="true">
+                        Course Name
+                    </th>
+                    <th data-field="Description" data-sortable="true">
+                        Description
+                    </th>
+                    <th data-field="Topics Covered" data-sortable="true">
+                        Topics Covered
+                    </th>
+                    <th data-field="Careers" data-sortable="true">
+                        Careers
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
 
 {% endblock %}
