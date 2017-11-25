@@ -65,3 +65,20 @@
 #bars {
   height: 70vh;
 }
+
+.chart-config-dropdown {
+  display: inline-block;
+  width: 80vw;
+}
+@media (min-width: 768px) {
+  .chart-config-dropdown {
+    display: inline-block;
+    width: 13vw;
+    margin-right: 1vw;
+  }
+}
+
+.glyphicon-sort {
+  font-size: .8em;
+  margin-left: .5em;
+}

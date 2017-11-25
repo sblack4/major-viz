@@ -27,13 +27,13 @@ function filltable(){
             columns: [
                 {
                     field: "Rank",
-                    sortable: true,
-                    title: "Rank",
+                    sortable: false,
+                    title: `Rank`,
                     searchable: true
                 },{
                     field: "Career",
                     sortable: true,
-                    title: "Career",
+                    title: `Career`,
                     searchable: true
                 },{
                     field: "AvailableJobs",
@@ -48,7 +48,7 @@ function filltable(){
                 },{
                     field: "MinimumProjectedGrowthAmount",
                     sortable: true,
-                    title: "Minimum ProjectedGrowth Amount",
+                    title: "Min. Projected Growth",
                     searchable: true
                 },{
                     field: "MedianSalary",
@@ -60,9 +60,41 @@ function filltable(){
             ],
             data: dataSet
         })
+
+        // insert <span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+        d3.selectAll('.sortable')
+            .insert('span')
+            .attr("class", "glyphicon glyphicon-sort")
+            .attr("aria-hidden", "true");
     })  
 }
 
+function makeChart(){
+
+
+
+    const tauChartsData = {
+        type: 'horizontal-bar',
+        x: 'StartingMedianSalary',
+        y: 'UndergraduateMajor',
+        color: 'Mid-CareerMedianSalary',
+        size: 'StartingMedianSalary',
+        guide: {
+            x: {
+                label: {text: 'Starting Median Salary'},
+                "tickFormat": "currency"
+            }, color: {
+                label: {text: 'Starting Median Salary'},
+                "tickFormat": "currency"
+            }
+        },
+        plugins: [
+            tauCharts.api.plugins.get('tooltip')(),
+            tauCharts.api.plugins.get('legend')(),
+            tauCharts.api.plugins.get('quick-filter')(),
+        ]
+    }
+}
 
 
 $('document').ready(function() {
@@ -79,3 +111,4 @@ $('document').ready(function() {
         console.log(data);
     })
 })
+
