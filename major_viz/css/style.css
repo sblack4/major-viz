@@ -69,16 +69,39 @@
 .chart-config-dropdown {
   display: inline-block;
   width: 80vw;
+  margin-left: 8vw;
 }
+
+#job-description {
+  float: center; 
+}
+
+#compare-career-charts {
+  /* min-height: 60vh; */
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
 @media (min-width: 768px) {
+
   .chart-config-dropdown {
     display: inline-block;
-    width: 13vw;
-    margin-right: 1vw;
+    width: 14%;
+    max-width: 14%;
+    margin-right: 1%;
+    margin-left: 1%;
   }
+
+  #job-description {
+    float: right; 
+    height: 100%; 
+    min-height: 100%;
+  }
+
 }
 
 .glyphicon-sort {
   font-size: .8em;
   margin-left: .5em;
 }
+

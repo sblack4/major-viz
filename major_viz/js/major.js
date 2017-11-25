@@ -69,30 +69,56 @@ function filltable(){
     })  
 }
 
-function makeChart(){
+function clearChart(){
+    const chart = $('#compare-career-charts');
+    const chart_exists = chart.children().length > 0;
+    if(chart_exists) {
+        chart.empty();
+    }
+}
 
-
+function makeChart(dataSet){
+    
+    const charttype = document.getElementById('career-charttype-select').value;
+    const xvar = document.getElementById('career-x-select').value;
+    const yvar = document.getElementById('career-y-select').value;
+    const colorvar = document.getElementById('career-color-select').value;
+    const sizevar = document.getElementById('career-size-select').value;
 
     const tauChartsData = {
-        type: 'horizontal-bar',
-        x: 'StartingMedianSalary',
-        y: 'UndergraduateMajor',
-        color: 'Mid-CareerMedianSalary',
-        size: 'StartingMedianSalary',
-        guide: {
-            x: {
-                label: {text: 'Starting Median Salary'},
-                "tickFormat": "currency"
-            }, color: {
-                label: {text: 'Starting Median Salary'},
-                "tickFormat": "currency"
-            }
-        },
+        type: charttype,
+        x: xvar,
+        y: yvar,
+        color: colorvar,
+        size: sizevar,
+        data: dataSet,
         plugins: [
             tauCharts.api.plugins.get('tooltip')(),
             tauCharts.api.plugins.get('legend')(),
             tauCharts.api.plugins.get('quick-filter')(),
         ]
+    }
+    const chart = new tauCharts.Chart(tauChartsData);
+    return chart;
+}
+
+function handleChartRendering(){
+    $('#compare-career-charts').removeClass('hidden');
+    try {
+        const data = $("#major-table").bootstrapTable('getSelections');
+        clearChart();  
+        let chart = makeChart(data);  
+        chart.renderTo('#compare-career-charts');
+        
+        const docheight = document.body.clientHeight;
+        chart.resize({ height: docheight*.4 });
+    } catch (error) {
+        console.error(error);
+        clearChart(); 
+        d3.select('#compare-career-charts')
+            .append('p')
+            .attr("class", "well")
+            .text(error.message);
     }
 }
 
@@ -101,14 +127,16 @@ $('document').ready(function() {
 
     $('#btnMajor').click(function(){
         $('#major-data-row').removeClass('hidden');
-
         filltable();
     });
 
     $('#compare-carreers-button').click(function(){
-        const data = $("#major-table").bootstrapTable('getSelections');
-
-        console.log(data);
+        handleChartRendering();
     })
+
+    d3.selectAll('.chart-config-dropdown')
+        .on('change', function() {
+            handleChartRendering();
+        });
 })
 
