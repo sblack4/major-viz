@@ -1,0 +1,97 @@
+﻿Type,Course,Course Name,Description,Skill,Carreers
+CS related,ECE 301,Digital Electronics,"Introduces digital systems, circuits, and computers. Topics include binary systems and codes, digital logic gates and circuits, microelectronics and integrated circuits, coding and multiplexing, multivibrators, shift registers, counters, A/D converters, and elementary computer architecture. A laboratory is included in this course.","Binary numbersbasic logic gates, combinational logic circuits, NAND and NOR circuit, Added circuits, BCD Adder circuit, Multiplexers, Flip-flops, Counter circuits, Clocked sequential logic circuits",Computer programmer; Software applications developer; Software systems developer
+CS related,ECE 431,Digital Integrated Circuit Analysis and Design,First learn and practice how to use the MOSFET transistor design equations to do “hand” analysis and design of simple digital circuits; this will then be the basis for a more extensive and thorough analysis and design of larger and more sophisticated circuits with the help of Computer Aided Design (CAD) tools. ,"Basics of MOSFET operation and SPICE modeling, MOS inverters: static characteristics, MOS inverters: dynamic operation, CMOS Layout and Simulation, combinational MOS logic circuits, sequential MOS logic circuits, dynamic MOS logic circuits, semiconductor memories ",Computer programmer; Software applications developer; Software systems developer
+CS related,SWE 432,Design and Implementation of Software for the Web,"This course will provide a comprehensive introduction to web development, covering JavaScript, back end development, front end development, and user interface design.","Knowledge of quantitative engineering principles for how to build software user interfaces, web-based user interfaces; client-server and message-passing computing models in the context of web applications; knowledge for how to build usable, secure and effective web applications; theoretical and practical knowledge about how data are stored and shared in web applications; component software development using specific technologies; understanding that usability is more important than efficiency for almost all modern software projects, and often the primary factor that leads to product success",Web developer; Database Administrator; Business Intelligence Analyst; Software Applications Developer
+CS related,SWE 437,Software Testing and Maintenance ,"Concepts and techniques for testing and modifying software in evolving environments. Topics include software testing at the unit, module, subsystem, and system levels; developer testing; automatic and manual techniques for generating test data; testing concurrent and distributed software; designing and implementing software to increase maintainability and reuse; evaluating software for change; and validating software changes.","Knowledge of quantitative, technical, practical methods; Testing techniques and criteria for all phases of software development - unit (developer) testing, integration testing, system testing, etc.; Theoretical and practical knowledge of how to apply test criteria to improve the quality of software; Knowledge of modern challenges and procedures to update continuously evolving software; Understanding of best quantitative programming and design practices for ensuring software can be efficiently and effectively modified and tested; Understanding that maintainability and testability are more important than efficiency for almost all modern software projects",Software quality assurance (QA) tester
+CS related,SWE 443,Software Architecture,"Will learn how to describe parts of the software development process with images and descriptive words to form different software architectures. We will see how these allow us to break software into components, describe their relations and even help us facilitate agile software development. We will use a methodological approach to design several course projects and review and improve the corresponding architectures. We will use software architectures for different levels of abstraction and learn how to find the correct level of abstraction for a respective problem. ","Understand, read, and evaluate different architectural styles for existing software systems; Recover the architecture of a software system by analyzing its code; Describe a system’s architecture accurately using views of the code and run-time structures; Use existing tools and architectural frameworks to expedite software design; Design a software system that satisfies a specification of requirements; Discuss the pros and cons of architectural alternatives. ",Software applications developer; computer programmer; software systems developers;
+CS related,SYST 371,Systems Engineering Management,"This course is intended to provide engineers with systems management and project control skills required to formulate and manage large, complex projects. The initial part will be devoted to the development and demonstration of individual ability to use engineering management tools, as well as to exercise control on the trade off performance, cost, and scheduling of a project. The second part of the course turns the focus to preparing engineers to face team competition in a project proposal situation. In this phase, team leaders will be chosen based upon individual performance on the midterm exam and homework, and will then select their teammates. All teams will be given a common engineering management problem and will bid for the contract at the end of the semester. I will act as the procurement executive of a large company that has published the request for proposal (RFP) and will assign grades based upon the merits of each team submission. ","Myers Briggs concept; project management; team working concept; project planning, scheduleing; meetings and budgeting; GANTT chart; extensions to PERM/CPM; resource allocation; monitoring and controlling; evaluating and terminating; final presentation; team presentation; ",Computer systems administrator; Computer systems analyst; computer systems engineer; network systems administrator; software systerms developes
+CS related,OR 335,Discrete Systems Simulation Modeling,"Examples of discrete-event systems are all around us: multiteller banks; computer networks; automated manufacturing systems; airport terminals; and traffic control systems. In order to efficiently manage and operate these systems, it is often necessary to apply simulation to study their performance since no closed-form analytical solutions exist for such problems. This course deals with this category of systems. Topics will include modeling techniques, introduction to queueing theory, random number generators, discrete-event simulation, Monte Carlo simulation, simulated data analysis, and simulation variance reduction techniques. In addition to the use of simulation software, each student is expected to produce successful simulations.","ARENA software; High-level programming languages such as Java, C++; Basic event scheduling simulation concept; iterate with simulation software; uniform random numbers; generationg nonuniform random numbers; input modeling; simulation output analysis; Monte Carlo simulation concept; advanced simulation topics",Modeling and simulation of scientific and engineering 
+CS related,OR 441,Deterministic Operation Research ,"This course will introduce the basic mathematical ideas and methods of Deterministic Operations Research. We will discuss modeling real life problems, the basic concepts of Linear Programming (LP), and methods for solving LP problems. We are going to discuss briefly some concepts of nonlinear optimization and their applications. There will be a project, which requires modeling real life problems using MPL languages available for downloading from the Internet (www.maximal-usa.com). ",Linear Programming Modeling and Formulation; Solving Linear Programs-graphical solutions; the Simplex Method; Sensitivity Analysis & Duality ; Network Optimization; Review of MPL syntax for Network Problems; Integer Programming-Formulation and Solution methods,Network systems administrator; Computer systems engineer; computer systems analyst; 
+CS related,OR 442,Stochastic Operations Research ,"The intent of this course is to provide a modern perspective on the analysis of systems that are stochastic in nature, that is, ones that have a random component. There will be an emphasis on the underlying random processes, ultimately leading to the development of practical strategies for dealing with the design and analysis of these systems in a contemporary technological environment. The course will provide a survey of probabilistic methods for solving decision problems under uncertainty. Topics covered by this class include inventory theory, Markov chains, queuing theory, forecasting, and simulation. Some review of probability theory will also be included. ",Deterministic and Probabilistic Inventory Models; Markov Chains; Queuing Theory; Forecasting Models; Simulation and Dynamic Programming,Network systems administrator; Computer systems engineer; computer systems analyst; 
+Senior CS Elective,CS 455,Computer Communications and Networking,"Data communications and networking protocols, with study organized to follow layers of Internet Protocol Suite (TCP/IP family of protocols). Topics include role of various media and software components, local and wide area network protocols, network performance, and emerging advanced commercial technologies.","OSI 7-layer model
+Signal encoding, modulation and multiplexing
+Flow/error control
+Medium access control
+Ethernet
+Routing
+Internet architecture
+TCP/UDP protocols
+Security, multimedia networking, wireless and mobile computing","Software Applications Developer
+Ccomputer System Engineer
+Network Systems Administrator 
+Database Administrator"
+Senior CS Elective,CS 468,Secure Programming and Systems,"Fundamental principles and techniques for implementing secure computer systems. Topics include security and cryptography basics, vulnerability analysis, secure software development, and distributed system security. Projects involve designing and programming basic security tools, secure programs, and distributed systems.Offered by Computer Science. Limited to two attempts.","Cryptography
+Secure Programming
+Secure Systems
+Securing Networks and Distributed Systems","Network Systems Administrator
+Database Administrator
+Software System Developer
+Software Quality Assurance (QA) tester
+Computer Systems Analyst"
+Senior CS Elective,CS 475,Concurrent and Distributed Systems,"Practical issues in designing and implementing concurrent and distributed software. Topics include concurrent programming, synchronization, multithreading, local and wide-area network protocols, distributed computation, systems integration, and techniques for expressing coarsegrained parallelism at the application level. Projects involve network programming at application level.","Multi-threaded/Concurrent Programming
+Distributed Systems
+Client-Server Applications
+Middleware technologies
+TCP/IP Sockets
+RPC/RMI
+Web Services (SOAP, XML)
+Advanced topics (time permitting) - Peer to Peer Computing, Parallel Programming","Computer System Analyst
+Software System Developer
+Network Systems Administrator"
+Senior CS Elective,CS 425,Game Programming I,Introduction to technologies and techniques used in modern computer games. Teams will explore the various facets of a complete design using sophisticated tools. Includes a project in which a game is prototyped; this prototype and initial design will serve as the starting point for the project in CS 426.,"Building Games
+Simulation
+Animation
+System Design
+Path Finding
+Artificial Intelligence
+Low Level Systems","Computer Programmer
+Software Applications Developer"
+Senior CS Elective,CS 440,Language Processors and Programming Environments,"Survey of basic programming language processors and software development tools such as assemblers, interpreters, and compilers. Topics include design and construction of language processors, formal syntactic definition methods, parsing techniques, and code-generation techniques.","Compiler Design
+Lexical Analysis
+Syntax Analysis - grammars, LL(1) parsers, LR(1) parsers
+Semantic Processing
+Code generation and optimization","Computer Programmer
+Software Applications Developer"
+Senior CS Elective,CS 450,Database Concepts,"Covers basics to intermediate knowledge for the design, implementation, and use of relational database systems. Topics include the Entity-Relationship (ER) and Entity-Enhanced Relationship (EER) models for database design, Relational Algebra (RA), Structured Query Language (SQL), SQL programming techniques, functional dependencies and normalization, object and object-relational databases, and security. Students will practice to design, develop, and implement a relational ORACLE database and use the database for queries, transaction processing, and report generation.","
+Overview of Database Systems 
+Introduction to Database Design 
+The Relational Model 
+Relational Algebra
+SQL
+Database Application Development
+Tree-Structured Indexing
+Hash-Based Indexing
+Schema Refinement and Normal Forms","Business Intelligence Analyst
+Computer Programmer
+Database Administrator
+Network Systems Administrator"
+Senior CS Elective,CS 451,Computer Graphics,"Basic graphics principles and programming. Topics include scan conversion, transformation, viewing, lighting, blending, texture mapping, and some advanced graphics techniques.Offered by Computer Science.","2D Compositing
+3D Transformations
+Ray Tracing
+Illumination
+The Graphics Pipeline
+GPU Shader Programming
+Texture Mapping
+Image Processing","Software Applications Developer
+Web Developer"
+Senior CS Elective,CS 463,Comparative Programming Languages,"Key programming mechanisms described independently of particular machines or languages, including control, binding, procedural abstraction, types, and concurrency. Includes basic programming competence in several different types of programming languages, including a language that provides concurrency. Notes: Students who have taken CS 363 may not receive credit for CS 463.","programming language constructs
+names, binding, scope
+control flow
+functional programming languages
+logic programming languages
+concurrency
+","Business Intelligence Analyst
+Computer Programmer
+Computer Systems Engineer
+Database Administrator
+Network Systems Administrator
+Software Systems Developer
+Software Quality Assurance (QA) tester"
+Senior CS Elective,CS 477,Mobile Application Development,"This project based course will teach fundamental principles of software development for the mobile device environment, emphasizing the application of numerous academic concepts and the new design and programming paradigms that stem from the use of mobile devices. Topics include user interfaces, event-based programming, interprocess communications, networking, mobile-specific capabilities and performance in a resource restricted environment.Offered by Computer Science. ","Mobile Application Data management
+Mobile Device Network Options
+Mobile Application User Interfaces
+Mobile Application Graphic Design
+Mobile Application Security","Computer Programmer
+Software Applications Developer
+Web Developer"
+,,,,,
