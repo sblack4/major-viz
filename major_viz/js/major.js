@@ -1,23 +1,22 @@
-$('document').ready(function() {
-
-    function updateWell(rowData) {
-        d3.select("#desc-p")
-            .style("opacity", 1)
+function updateWell(rowData) {
+    d3.select("#desc-p")
+        .style("opacity", 1)
+        .transition()
+        .duration(500)
+        .style("opacity", 0).remove();
+    window.setTimeout(function() {
+        d3.select("#description-well")
+            .append("p")
+            .attr("id", "desc-p")
+            .style("opactiy", 0)
+            .html(rowData["DailyDuties"])
             .transition()
-            .duration(500)
-            .style("opacity", 0).remove();
-        window.setTimeout(function() {
-            d3.select("#description-well")
-                .append("p")
-                .attr("id", "desc-p")
-                .style("opactiy", 0)
-                .html(rowData["DailyDuties"])
-                .transition()
-                .duration(620)
-                .style("opacity", 1);
-        }, 500)
-    }
+            .duration(620)
+            .style("opacity", 1);
+    }, 500)
+}
 
+function filltable(){
     d3.csv("../data/compsci-jobs.csv", function(error, dataSet){
         if(error)
             console.error(error);
@@ -62,4 +61,21 @@ $('document').ready(function() {
             data: dataSet
         })
     })  
+}
+
+
+
+$('document').ready(function() {
+
+    $('#btnMajor').click(function(){
+        $('#major-data-row').removeClass('hidden');
+
+        filltable();
+    });
+
+    $('#compare-carreers-button').click(function(){
+        const data = $("#major-table").bootstrapTable('getSelections');
+
+        console.log(data);
+    })
 })
