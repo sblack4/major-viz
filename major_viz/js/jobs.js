@@ -24,9 +24,9 @@ function searchJobs(){
 
 /**
  * 
- * @param {str} value 
- * @param {*} row 
- * @param {*} index 
+ * @param {string} value 
+ * @param {any[]} row 
+ * @param {number} index 
  */
 function imageFormatter(value, row, index) {
     return `<img style="height:40px; max-width: 70px;" src="${value}"></img>`;
