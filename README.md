@@ -17,6 +17,7 @@ Thank you:
 * [d3js](https://d3js.org/) for powering so many beautiful charts
 * [taucharts](https://www.taucharts.com/) for providing such a clean api to use with those charts
 * [kaggle](https://www.kaggle.com/) for providing data 
+* [awesomecomplete](http://leaverou.github.io/awesomplete/) for super easy light-weight autocompletion 
 
 
 ## Getting a Local Version

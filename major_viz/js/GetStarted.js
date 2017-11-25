@@ -6,6 +6,12 @@ function percentFormatter(value, row, index) {
     return value + "%";
 }
 
+function cleanChart() {
+    if ($('#bars').children().length > 0) {
+        $('#bars').empty();
+    }
+}
+
 function loadData(csvPath, tableNode, showColumns, tauParams) {
     var chart;
 
@@ -50,6 +56,7 @@ $('document').ready(function () {
     $('#degreesTab').click(function () {
         let alreadyClicked = $(this).parent().hasClass('active');
         if (!alreadyClicked){
+            cleanChart();
             loadData("../data/degrees-that-pay-back.csv",
                 '#degreesTable',
                 [{
@@ -86,6 +93,9 @@ $('document').ready(function () {
                         x: {
                             label: {text: 'Starting Median Salary'},
                             "tickFormat": "currency"
+                        }, color: {
+                            label: {text: 'Starting Median Salary'},
+                            "tickFormat": "currency"
                         }
                     },
                     plugins: [
@@ -100,6 +110,7 @@ $('document').ready(function () {
     $('#salaries-collegeTab').click(function () {
         let alreadyClicked = $(this).parent().hasClass('active');
         if (!alreadyClicked){
+            cleanChart();
             loadData("../data/salaries-by-college-type.csv",
             '#collegeTable',
             [{
@@ -146,6 +157,7 @@ $('document').ready(function () {
     $('#salaries-regionTab').click(function () {
         let alreadyClicked = $(this).parent().hasClass('active');
         if (!alreadyClicked){
+            cleanChart();
             loadData("/data/salaries-by-region.csv", 
                 '#regionsTable', [{
                     field: "SchoolName",

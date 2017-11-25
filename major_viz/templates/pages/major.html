@@ -1,6 +1,6 @@
 {% extends "pages/layout.html" %} {% block body %}
 <div class="row" style="height: 10vh;">
-    <div id="major-input" class="col-md-6">
+    <div id="major-input" class="col-md-6 col-xs-12">
         <div class="input-group" style="margin-top: 2vh;">
             <input type="text" list="mylist" class="form-control" placeholder="My Major is..." aria-label="My Major is...">
             <datalist id="mylist">
@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="row" style="height: 80vh;">
-    <div id="major-table-col" class="col-md-10" style="float: left;">
+    <div id="major-table-col" class="col-md-10 col-sm-12" style="float: left;">
         <table id="major-table" class="dataTable" data-toolbar="#toolbar" data-search="true" data-show-refresh="true" data-show-toggle="true"
             data-show-columns="true" data-show-export="true" data-detail-view="true" data-minimum-count-columns="2" data-show-pagination-switch="true"
             data-pagination="true" data-id-field="Rank" data-page-list="[10, 25, 50, 100, ALL]" data-show-footer="false" data-sort-name="Rank"
@@ -46,9 +46,10 @@
             </thead>
         </table>
     </div>
-    <div id="job-description" class="col-md-2" style="float: right;">
-        <div id="description-well" class="well">
-            <p id="desc-p"></p>
+    <div id="job-description" class="col-md-2 col-sm-12" style="float: right; height: 100%; min-height: 100%;">
+        <h3>Description</h3>
+        <div id="description-well" class="well" >
+            <p id="desc-p">...</p>
         </div>
     </div>
 </div>
