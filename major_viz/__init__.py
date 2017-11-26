@@ -1,6 +1,10 @@
 from flask import Blueprint, render_template, abort, Flask, send_from_directory, jsonify
 from jinja2 import TemplateNotFound
-import urllib
+from sys import version_info
+if version_info[0] == 3:
+    import urllib
+else:
+    import urllib2
 import json
 
 major_viz = Blueprint('major_viz', __name__,

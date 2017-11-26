@@ -61,11 +61,16 @@ function filltable(){
             data: dataSet
         })
 
+        const glyphicon_exists = $('.sortable').children().length > 0;
         // insert <span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
-        d3.selectAll('.sortable')
-            .insert('span')
-            .attr("class", "glyphicon glyphicon-sort")
-            .attr("aria-hidden", "true");
+        
+        if (!glyphicon_exists){
+            d3.selectAll('.sortable')
+                .insert('span')
+                .attr("class", "glyphicon glyphicon-sort")
+                .attr("aria-hidden", "true");
+        }
+
     })  
 }
 
