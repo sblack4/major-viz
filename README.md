@@ -2,10 +2,10 @@
 
 ## About
 
-CDS301 - 500 
-@lpincus
-@knguyen
-@ylee
+CDS301 - 500  
+@lpincus  
+@knguyen  
+@ylee  
 @sblack4 (just helping)
 
 Thank you: 

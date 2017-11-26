@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, abort, Flask, send_from_directory,
 from jinja2 import TemplateNotFound
 from sys import version_info
 if version_info[0] == 3:
-      from urllib import urlopen
+      from urllib.request import urlopen
 else:
       from urllib2 import urlopen
 import json
