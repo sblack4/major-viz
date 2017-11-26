@@ -27,6 +27,7 @@ body, html {
 #paraText {
   background-image: url("/img/grad.jpg");
   color: white;
+  background-color: #fff;
   height: 60vh;
   /* width: 105vw; */
   background-position: top center;
