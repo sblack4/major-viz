@@ -2,3 +2,6 @@
 *.pyc
 
 *.map
+
+.DS_store
+.Rhistory
