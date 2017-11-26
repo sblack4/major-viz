@@ -1,34 +1,7 @@
 
-<<<<<<< HEAD
- /* header {
-    padding: 154px 0 100px;
-    height: 80vh;
-    width: 120vw;
-    background-attachment: fixed;
-    background-position: top center;
-    background-size: cover;
-    display: block;
-    margin: 0 auto;
-    z-index: -1;
-  }
-
-  @media (min-width: 992px) {
-    header {
-      padding: 156px 0 100px;
-      display: block;
-      margin: 0 auto;
-      z-index: -1;
-    }
-  } */
-
-  div.fixed-table-loading {
-    visibility: hidden;
-  }
-=======
 div.fixed-table-loading {
   visibility: hidden;
 }
->>>>>>> 6c9d575da370fbc9b782b718930f4f4c1180261f
 
 body, html {
   overflow-x: hidden;
@@ -82,8 +55,7 @@ body, html {
 #bars {
   height: 70vh;
 }
-<<<<<<< HEAD
-=======
+
 
 .chart-config-dropdown {
   display: inline-block;
@@ -123,4 +95,4 @@ body, html {
   }
 
 }
->>>>>>> 6c9d575da370fbc9b782b718930f4f4c1180261f
+
