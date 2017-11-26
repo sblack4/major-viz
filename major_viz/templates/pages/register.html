@@ -1,6 +1,26 @@
-{% extends "pages/layout.html" %}
+{% extends "pages/layout.html" %} {% block body %}
 
-{% block body %}
-
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form>
+        <h2>Register</h2>
+        First Name:<br>
+        <input id="register_first" type="text" name="register_first"><br>
+        Last Name:<br>
+        <input id="register_lastname" type="text" name="register_last"><br>
+        Email Address:<br>
+        <input id="register_mail" type="email" name="register_mail"><br>
+        User name:<br>
+        <input id="register_username" type="text" name="register_username"><br>
+        Password:<br>
+        <input id="register_psw" type="password" name="register_psw">
+    </form>
+    <form
+        <div class="btn-group" role="group" aria-label="...">
+            <button id="register_button" type="button" class="btn btn-default">Submit</button>
+        </div>
+    </form>
+</div>
+</div>
 
 {% endblock %}
