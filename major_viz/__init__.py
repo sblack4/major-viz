@@ -2,9 +2,9 @@ from flask import Blueprint, render_template, abort, Flask, send_from_directory,
 from jinja2 import TemplateNotFound
 from sys import version_info
 if version_info[0] == 3:
-    import urllib
+      from urllib import urlopen
 else:
-    import urllib2
+      from urllib2 import urlopen
 import json
 
 major_viz = Blueprint('major_viz', __name__,
@@ -51,7 +51,7 @@ def send_data(path):
 
 @app.route('/api/<description>')
 def get_jobs(description):
-      response = urllib2.urlopen("https://jobs.github.com/positions.json?description="+description)
+      response = urlopen("https://jobs.github.com/positions.json?description="+description)
       return jsonify(json.load(response))
 
 
