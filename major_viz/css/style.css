@@ -1,8 +1,8 @@
 
  /* header {
     padding: 154px 0 100px;
-    height: 80vh; 
-    width: 120vw; 
+    height: 80vh;
+    width: 120vw;
     background-attachment: fixed;
     background-position: top center;
     background-size: cover;
@@ -10,7 +10,7 @@
     margin: 0 auto;
     z-index: -1;
   }
-  
+
   @media (min-width: 992px) {
     header {
       padding: 156px 0 100px;
@@ -34,11 +34,10 @@
 }
 
 #paraText {
-  background-image: url("/img/graduation.jpg");
+  background-image: url("/img/grad.jpg");
   color: white;
   height: 60vh;
   /* width: 105vw; */
-  background-attachment: fixed;
   background-position: top center;
   background-size: cover;
   overflow-x: hidden;
