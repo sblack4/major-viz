@@ -18,7 +18,7 @@
 
 
 function searchJobs(){
-    const search_term = "/"+$('input#job-search-input').val() || "";
+    const search_term = ($('input#job-search-input').val()) ? "/"+$('input#job-search-input').val() : "";
     populateTable(search_term);
 }
 
@@ -97,8 +97,25 @@ function buildTable(dataSet){
 
 function populateTable(search_term) {
     d3.json("/api"+search_term, function(error, dataSet){
-        if(error)
+        if(error) {
             console.error(error);
+            d3.select("#job-desc-p")
+                .style("opacity", 1)
+                .transition()
+                .duration(500)
+                .style("opacity", 0).remove();
+            window.setTimeout(function() {
+                d3.select("#job-desc-well")
+                    .append("p")
+                    .attr("id", "job-desc-p")
+                    .style("opactiy", 0)
+                    .html(error.message)
+                    .transition()
+                    .duration(620)
+                    .style("opacity", 1);
+            }, 500)
+        }
+            
         
         if($('#job-table').children().length < 1) {
             buildTable(dataSet);

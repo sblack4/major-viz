@@ -54,7 +54,7 @@ body, html {
 
 
 #bars {
-  height: 70vh;
+  min-height: 70vh;
 }
 
 .chart-config-dropdown {

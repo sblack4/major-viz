@@ -12,6 +12,13 @@ function cleanChart() {
     }
 }
 
+/**
+ * Loads the table and chart, sets up for updates 
+ * @param {string} csvPath 
+ * @param {string} tableNode 
+ * @param {Object[]} showColumns 
+ * @param {object} tauParams 
+ */
 function loadData(csvPath, tableNode, showColumns, tauParams) {
     var chart;
 
@@ -26,9 +33,15 @@ function loadData(csvPath, tableNode, showColumns, tauParams) {
 
     function updateChart() {
         window.setTimeout(function(){
-                chart.setData(cleanData($(tableNode).bootstrapTable('getData', useCurrentPage=true)));
-            },300);
-;        
+            cleanChart()
+            const newHeight = document.body.scrollHeight * .9 - document.getElementById('bars').getBoundingClientRect().top;
+            console.log(newHeight);
+            tauCharts.api.tickFormat.add("currency", d3.format(["$",",.2f"]));
+            tauParams.data = cleanData($(tableNode).bootstrapTable('getData', useCurrentPage=true));
+            chart = new tauCharts.Chart(tauParams);
+            chart.renderTo('#bars');
+            chart.resize({ height:  newHeight});
+            },300);    
     }
 
     d3.csv(csvPath, function(error, dataSet){
@@ -44,17 +57,29 @@ function loadData(csvPath, tableNode, showColumns, tauParams) {
             columns: showColumns,
             data: dataSet
         })
-        tauCharts.api.tickFormat.add("currency", d3.format(["$",",.2f"]));
+        
+        d3.select(tableNode)
+            .selectAll('.sortable')
+            .selectAll('span')
+            .remove();
 
-        tauParams.data = cleanData($(tableNode).bootstrapTable('getData', useCurrentPage=true));
-        chart = new tauCharts.Chart(tauParams);
-        chart.renderTo('#bars');
-    })  
+        d3.select(tableNode)
+            .selectAll('.sortable')
+            .insert('span')
+            .attr("class", "glyphicon glyphicon-sort")
+            .attr("aria-hidden", "true");
+
+
+        updateChart();
+    })
+
 }
 
 $('document').ready(function () {
     $('#degreesTab').click(function () {
+
         let alreadyClicked = $(this).parent().hasClass('active');
+
         if (!alreadyClicked){
             cleanChart();
             loadData("../data/degrees-that-pay-back.csv",
@@ -150,8 +175,7 @@ $('document').ready(function () {
                     tauCharts.api.plugins.get('legend')(),
                     tauCharts.api.plugins.get('quick-filter')(),
                     ]
-            }
-            )
+            })
         }
     });
     $('#salaries-regionTab').click(function () {
@@ -198,8 +222,7 @@ $('document').ready(function () {
                         tauCharts.api.plugins.get('legend')(),
                         tauCharts.api.plugins.get('quick-filter')(),
                         ]
-                }
-                )
+                })
         }
     });
 
