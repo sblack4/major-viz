@@ -1,4 +1,6 @@
 
+
+
 var major_data; 
 d3.csv('../data/majors.csv', function(err, data){
     if(err) {

@@ -84,6 +84,10 @@ h3 {
   display: inline;
 }
 
+#welcome-back {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
 
   .chart-config-dropdown {
