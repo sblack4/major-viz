@@ -20,14 +20,6 @@ Thank you:
 * [awesomecomplete](http://leaverou.github.io/awesomplete/) for super easy light-weight autocompletion 
 
 
-## Getting a Local Version
-1. On [github](https://github.com/sblack4/major-viz) click `Fork`
-2. It'll stick a fork in a book.  When that is done you should be at `https://github.com/<your-username>/major-viz`
-3. Wherever you'd like the `major-viz` folder open your terminal and type `git clone https://github.com/<your-username>/major-viz.git`
-
-** make sure to substitute `<your-username>` for your actual github username
-** if you don't have git installed they have a nice GUI at [desktop.github.com](https://desktop.github.com/) so you don't have to do git command line stuff
-
 ## Running on your Laptop
 
 This website is hosted using python (v 2.7)
@@ -46,16 +38,9 @@ Navigate into the `major_viz` folder and type `python __init__.py`. Go to [local
 ## Contributing 
 
 Git is a Version Control System, that let's teams of developers 
-work on large codebases without letting them break it (atleast it provides a way to un-break it)
+work on large codebases without letting them break it (at least it provides a way to un-break it)
 
 The internet has done a fantastic job of covering `git` basics, 
 there are free [books](https://git-scm.com/book/en/v1/Git-Basics) about 
 it, awesome [tutorials you can do in your browser](https://try.github.io/) ,
 and [loads of documentation](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
-
-Basically here's how it will work: 
-
-* `git clone <project-here>` to get it on your computer
-* `git add .` to add files & changes
-* `git commit -m "<message-ie-just-added-to-readme>"` to commit those changes to the log
-* `git push` to send those changes back up to git 
